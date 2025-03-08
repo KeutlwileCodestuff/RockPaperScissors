@@ -62,6 +62,18 @@
             let scorings = `wins: ${scores.wins},loses: ${scores.loses} ,ties: ${scores.ties}`;
             return [print , scorings];
         }
+
+        function State(statement){
+
+            if(statement === 'you win'){
+                document.querySelector('.js-state').innerHTML = 'You win';
+            }else if (statement === 'you loose'){
+                document.querySelector('.js-state').innerHTML = 'you loose';
+            }else{
+                document.querySelector('.js-state').innerHTML = 'its a tie';
+            }
+        }
+
     </script>
 </body>
 </html>
