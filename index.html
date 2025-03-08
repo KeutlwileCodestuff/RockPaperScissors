@@ -6,6 +6,59 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <div class = "p">
+            <h3 class="p1"> Rock Paper Scissors</h3>
+        </div>
+        <div class="div1">
+            <button class="js-rock"
+            onclick="
+                randomMove = GenerateMove();
+                [statement,scorings ] = UserPick('rock' , randomMove);
+                State(statement);
+                Scorings(scorings)
+    
+            "
+            >Rock</button>
+    
+            <button class="js-paper"
+            onclick="
+            randomMove = GenerateMove();
+            [statement,scorings ]= UserPick('paper' , randomMove);
+            State(statement);
+            Scorings(scorings)
+            ">Paper</button>
+    
+    
+            <button class="js-scissors"
+            onclick="
+            randomMove = GenerateMove();
+            [statement,scorings ]= UserPick('rock' , randomMove);
+            State(statement);
+            Scorings(scorings)
+    
+            ">Scissors</button>
+    
+        </div>
+    
+        <div class="div2">
+            <!-- the paragraph that shows if you won or oyou lost -->
+            <p class="js-state"></p>
+            <!-- displays the user and computer moves -->
+            <p class="js-you-and-computer"></p>
+            <!-- displays the scores -->
+            <p class="js-scores"></p>
+        </div>
+    
+        <div class="div3">
+            <button class="js-reset"
+            onclick="
+                ResetScores();
+            "
+            >Reset</button>
+        </div>
+    </div>
+
     <script>
         function GenerateMove(){
             const moves = ['rock' , 'paper' , 'scissors'];
