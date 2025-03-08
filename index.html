@@ -74,6 +74,18 @@
             }
         }
 
+        function Scorings(scores){
+            document.querySelector('.js-scores').innerHTML = scores;
+        }
+
+        function ResetScores(){
+            scores.loses = 0;
+            scores.ties = 0;
+            scores.wins = 0;
+
+            document.querySelector('.js-scores').innerHTML = `wins: ${scores.wins},loses: ${scores.loses} ,ties: ${scores.ties}`;
+            alert('Scores have reset.')
+        }
     </script>
 </body>
 </html>
